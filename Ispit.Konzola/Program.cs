@@ -28,7 +28,7 @@ namespace Ispit.Konzola
             {
                 Console.Write($"\n{grupa.Banka}:");
 
-                    bool first = true;
+                bool first = true;
                 foreach (var milijunas in grupa.Milijunasi)
                 {
                     if (first)
@@ -44,7 +44,7 @@ namespace Ispit.Konzola
                 }
             }
 
-    
+
 
             //************* ispis milijunaša i banke u kojoj se nalazi **************
 
@@ -55,7 +55,7 @@ namespace Ispit.Konzola
                 b => b.Simbol,
                 (k, b) => new
                 {
-                    k.ImePrezime, 
+                    k.ImePrezime,
                     Banka = b.Naziv
                 });
 
