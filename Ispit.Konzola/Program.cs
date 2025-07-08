@@ -11,8 +11,9 @@ namespace Ispit.Konzola
             var servisPodataka = new Podaci();
 
 
-            //*********** grupiranje milijunaša ***********
 
+            #region GrupiranjeMilijunasa
+            //*********** grupiranje milijunaša ***********
 
             var grupirajPremaBanci = servisPodataka.ListaKlijenata
                 .Where(k => k.Stanje >= 1000000)
@@ -44,8 +45,10 @@ namespace Ispit.Konzola
                 }
             }
 
+            #endregion
 
 
+            #region IspisMilijunasa
             //************* ispis milijunaša i banke u kojoj se nalazi **************
 
             var izvjestajMilijunasa = servisPodataka.ListaKlijenata
@@ -65,6 +68,8 @@ namespace Ispit.Konzola
             {
                 Console.WriteLine($"{item.ImePrezime} je u {item.Banka}");
             }
+
+            #endregion
 
 
 
