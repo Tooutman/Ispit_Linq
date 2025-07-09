@@ -21,7 +21,7 @@ namespace Ispit.Konzola
                 .Select(m => new GrupiraniMilijunasi()
                 {
                     Banka = m.Key,
-                    Milijunasi = m.Select(k => $" {k.ImePrezime}")
+                    Milijunasi = m.Select(k => $"{k.ImePrezime}")
                 });
 
 
@@ -68,6 +68,10 @@ namespace Ispit.Konzola
             {
                 Console.WriteLine($"{item.ImePrezime} je u {item.Banka}");
             }
+
+            //ILI
+            Console.WriteLine("\n"); //prazni red 
+            izvjestajMilijunasa.ToList().ForEach(i => Console.WriteLine($"{i.ImePrezime} je u {i.Banka}"));
 
             #endregion
 
